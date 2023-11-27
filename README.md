@@ -10,9 +10,10 @@ The application is setup to create a docker container, but it can be also be run
 ## Configuration
 
 The configuration variables that need to be filled out:  
- * `NUMBER_OF_POINTS` - The number of simulated point readings returned per api call
- * `POINT_PREFIX` - The prefix to add to each point
- * `PORT_NUMBER` - The port number used by `Cowboy` to run the API. This has to match the port settings in the `docker-compose.yml` file 
+ * `NUMBER_OF_PROJECTS` - The number of simulated projects to create, stored as individual keys
+ * `NUMBER_OF_PROJECTS` - The number of points to created simulated data for, per project
+ * `Delay` - The number of seconds to delay between the start of one population cycle to the start of the next
+ * `REDIS_HOST` - The Redis host address to send the simulated data to. Keep it at `127.0.0.1` if you are using the full docker container version of this app.
   
   
 The configuration method is different based on whether you want to run it in Docker, or via `iex`.  
